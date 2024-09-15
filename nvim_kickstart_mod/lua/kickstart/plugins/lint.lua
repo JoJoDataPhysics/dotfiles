@@ -7,6 +7,11 @@ return {
       local lint = require 'lint'
       lint.linters_by_ft = {
         markdown = { 'markdownlint' },
+        -- javascript = { 'eslint' },
+        -- typescript = { 'eslint' },
+        -- python = { 'pylint', 'flake8' },
+        -- clojure = { 'clj-kondo' },
+        -- java = { 'checkstyle' },
       }
 
       -- To allow other plugins to add linters to require('lint').linters_by_ft,

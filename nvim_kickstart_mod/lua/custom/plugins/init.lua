@@ -22,6 +22,8 @@ return {
   { 'tpope/vim-scriptease' },
   {
     'lukas-reineke/indent-blankline.nvim',
+    main = 'ibl',
+    commit = '29be0919b91fb59eca9e90690d76014233392bef',
     config = function()
       require 'custom.configs.indent_blankline'
     end,
@@ -60,20 +62,6 @@ return {
       'stevearc/resession.nvim', -- Optional, for persistent history
     },
     config = true,
-  },
-  {
-    'jackMort/ChatGPT.nvim',
-    event = 'VeryLazy',
-    dependencies = {
-      'MunifTanjim/nui.nvim',
-      'nvim-lua/plenary.nvim',
-      'nvim-telescope/telescope.nvim',
-    },
-    config = function()
-      require('chatgpt').setup {
-        api_key_cmd = 'pass show coding/chatGPT',
-      }
-    end,
   },
   {
     'mrcjkb/rustaceanvim',
