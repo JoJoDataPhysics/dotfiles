@@ -60,19 +60,18 @@ return {
     branch = 'harpoon2',
     dependencies = { 'nvim-lua/plenary.nvim' },
   },
-  -- commented out because plugin crashes nvim in wsl ...
-  -- {
-  --   'ziontee113/icon-picker.nvim',
-  --   config = function()
-  --     require('icon-picker').setup { disable_legacy_commands = true }
+  {
+    'ziontee113/icon-picker.nvim',
+    config = function()
+      require('icon-picker').setup { disable_legacy_commands = true }
 
-  -- local opts = { noremap = true, silent = true }
+      local opts = { noremap = true, silent = true }
 
-  -- vim.keymap.set('n', '<Leader>ii', '<cmd>IconPickerNormal<cr>', opts)
-  -- vim.keymap.set('n', '<Leader>iy', '<cmd>IconPickerYank<cr>', opts) --> Yank the selected icon into register
-  --     vim.keymap.set('n', '<C-i>', '<cmd>IconPickerInsert<cr>', opts)
-  --   end,
-  -- },
+      vim.keymap.set('n', '<Leader>ii', '<cmd>IconPickerNormal<cr>', opts)
+      vim.keymap.set('n', '<Leader>iy', '<cmd>IconPickerYank<cr>', opts) --> Yank the selected icon into register
+      vim.keymap.set('i', '<C-i>', '<cmd>IconPickerInsert<cr>', opts)
+    end,
+  },
   { 'folke/zen-mode.nvim' },
   {
     'folke/trouble.nvim',
