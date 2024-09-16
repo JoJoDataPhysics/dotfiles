@@ -1,7 +1,3 @@
--- You can add your own plugins here or in other files in this directory!
---  I promise not to create any merge conflicts in this directory :)
---
--- See the kickstart.nvim README for more information
 return {
   {
     'folke/twilight.nvim',
@@ -283,6 +279,35 @@ return {
       vim.g.copilot_tab_fallback = ''
       -- The mapping is set to other key, see custom/lua/mappings
       -- or run <leader>ch to see copilot mapping section
+    end,
+  },
+  {
+    'robitx/gp.nvim',
+    config = function()
+      local conf = {
+        openai_api_key = { 'pass', 'coding/chatGPT' },
+
+        providers = {
+          -- openai = {
+          --   endpoint = 'https://api.openai.com/v1/chat/completions',
+          --   secret = { 'pass', 'coding/chatGPT' },
+          -- },
+          --
+          -- azure = {...},
+
+          copilot = {
+            endpoint = 'https://api.githubcopilot.com/chat/completions',
+            secret = {
+              'bash',
+              '-c',
+              "cat ~/.config/github-copilot/hosts.json | sed -e 's/.*oauth_token...//;s/\".*//'",
+            },
+          },
+        },
+      }
+      require('gp').setup(conf)
+
+      -- Setup shortcuts here (see Usage > Shortcuts in the Documentation/Readme)
     end,
   },
   {
