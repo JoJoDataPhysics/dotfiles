@@ -1094,6 +1094,8 @@ require('noice').setup {
     lsp_doc_border = false, -- add a border to hover docs and signature help
   },
 }
+-- Dismiss Noice Message
+vim.keymap.set('n', '<leader>nd', '<cmd>NoiceDismiss<CR>', { desc = 'Dismiss Noice Message' })
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
