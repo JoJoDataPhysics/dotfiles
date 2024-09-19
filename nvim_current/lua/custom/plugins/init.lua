@@ -1,4 +1,5 @@
 return {
+  { 'ggandor/leap.nvim' },
   { 'hrsh7th/cmp-cmdline', after = 'cmp-nvim-lsp' },
   {
     'MeanderingProgrammer/render-markdown.nvim',
