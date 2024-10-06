@@ -98,3 +98,8 @@ end, { desc = "Load last session" })
 vim.keymap.set("n", "<leader>yd", function()
 	require("persistence").stop()
 end, { desc = "Stop Persistence" })
+
+-- Terminal use
+vim.keymap.set('t','<leader><ESC>','<C-\\><C-n>',{desc = "Esc in terminal", noremap = true})
+vim.keymap.set('n', '<A-i>', '<CMD>lua require("FTerm").toggle()<CR>')
+vim.keymap.set('t', '<A-i>', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>')
