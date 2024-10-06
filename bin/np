@@ -1,0 +1,11 @@
+#!/usr/bin/env fish
+
+if test -z "$argv[1]"
+    echo "Error: A file name must be set, e.g. on \"the wonderful thing about tiggers\"."
+    exit 1
+end
+
+set file_name (echo $argv[1] | tr ' ' '-')
+
+cp /home/joerg/bin/template.py "./$file_name"
+
