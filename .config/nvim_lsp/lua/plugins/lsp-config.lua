@@ -11,7 +11,7 @@ return {
             require("mason-lspconfig").setup({
                 ensure_installed = {
                     "lua_ls",
-                    "ts_ls"
+                    "ts_ls",
                 },
             })
         end,
@@ -20,10 +20,10 @@ return {
         "neovim/nvim-lspconfig",
         config = function()
             local lspconfig = require("lspconfig")
-            lspconfig.tsserver.setup({})
+            lspconfig.ts_ls.setup({})
+            lspconfig.ruff.setup({})
             lspconfig.pyright.setup({})
             lspconfig.pylsp.setup({})
-            lspconfig.flake8.setup({})
             lspconfig.lua_ls.setup({
                 settings = {
                     Lua = {
