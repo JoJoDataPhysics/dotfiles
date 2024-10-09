@@ -1,0 +1,18 @@
+#!/usr/bin/env fish
+
+# Check if an argument is provided
+if test (count $argv) -eq 0
+    echo "Usage: $argv[0] <directory_name>"
+    exit 1
+end
+
+# Create directory with the name provided as the first argument
+mkdir -p $argv[1]
+
+# Confirm the directory has been created
+if test -d $argv[1]
+    echo "Directory '$argv[1]' created successfully."
+    touch "$argv[1]/__init__.py"
+else
+    echo "Failed to create directory '$argv[1]'."
+end

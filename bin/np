@@ -1,0 +1,17 @@
+#!/usr/bin/env fish
+
+# Check if an argument is provided
+if test (count $argv) -eq 0
+    echo "Usage: $argv[0] <file_name>"
+    exit 1
+end
+
+# copy template file to current location
+cp /home/joerg/bin/template.py "./$argv[1]"
+
+# Confirm the file has been created
+if test -f $argv[1]
+    echo "File '$argv[1]' created successfully."
+else
+    echo "Failed to create file '$argv[1]'."
+end
