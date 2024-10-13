@@ -42,7 +42,7 @@ function nvims
 end
 
 alias n nvim-lsp
-alias cd z
+#alias cd z
 alias ls lsd
 alias cat bat
 alias lg 'lazygit'
