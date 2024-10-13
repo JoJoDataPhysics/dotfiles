@@ -7,7 +7,7 @@ return {
       vim.g.copilot_assume_mapped = true
       vim.g.copilot_tab_fallback = ''
       vim.g.copilot_no_tab_map = true
-      vim.api.nvim_set_keymap('i', '<C-J>', 'copilot#Accept("<CR>")', { silent = true, expr = true })
+      vim.api.nvim_set_keymap('i', '<M-y>', 'copilot#Accept("<CR>")', { silent = true, expr = true })
       vim.keymap.set('i', '<M-k>', '<Plug>(copilot-next)')
       vim.keymap.set('i', '<M-l>', '<Plug>(copilot-prev)')
       vim.keymap.set('i', '<M-q>', '<Plug>(copilot-dismiss)')
