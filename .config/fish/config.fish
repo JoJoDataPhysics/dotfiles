@@ -16,13 +16,11 @@ function ranger-cd
   rm -f $tempfile
 end
 
-alias nvim-kick="env NVIM_APPNAME=nvim_kickstart nvim"
 alias nvim-chad="env NVIM_APPNAME=nvim_nvchad nvim"
 alias nvim-lsp="env NVIM_APPNAME=nvim_lsp nvim"
-alias nvim-no-for="env NVIM_APPNAME=nvim_no_format_on_save nvim"
 
 function nvims
-    set items "default" "nvim_lsp" "nvim_no_format_on_save" "nvim_kickstart" "nvim_nvchad" "vanilla" 
+    set items "default" "nvim_lsp" "nvim_nvchad" "vanilla" 
     set config (printf '%s\n' $items | fzf --prompt=" Neovim Config  " --height=50% --layout=reverse --border --exit-0)
 
     if test -z "$config"
