@@ -7,6 +7,10 @@ return {
         build = "make install_jsregexp",
         config = function()
             local ls = require("luasnip")
+            function _G.ReloadSnippets()
+                ls.cleanup()
+                vim.cmd("source ~/.config/nvim_lsp/lua/plugins/snippets.lua")
+            end
 
             vim.keymap.set({ "i" }, "<C-K>", function()
                 ls.expand()
@@ -18,6 +22,7 @@ return {
                 ls.jump(-1)
             end, { silent = true })
 
+            vim.keymap.set("n", "<leader>rs", ":lua ReloadSnippets()<CR>", { noremap = true, silent = true })
             vim.keymap.set({ "i", "s" }, "<C-E>", function()
                 if ls.choice_active() then
                     ls.change_choice(1)
