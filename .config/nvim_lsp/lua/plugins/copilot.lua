@@ -7,9 +7,9 @@ return {
       vim.g.copilot_assume_mapped = true
       vim.g.copilot_tab_fallback = ''
       vim.g.copilot_no_tab_map = true
-      vim.api.nvim_set_keymap('i', '<M-y>', 'copilot#Accept("<CR>")', { silent = true, expr = true })
+      vim.api.nvim_set_keymap('i', '<M-,>', 'copilot#Accept("<CR>")', { silent = true, expr = true })
       vim.keymap.set('i', '<M-k>', '<Plug>(copilot-next)')
-      vim.keymap.set('i', '<M-l>', '<Plug>(copilot-prev)')
+      vim.keymap.set('i', '<M-l>', '<Plug>(copilot-previous)')
       vim.keymap.set('i', '<M-q>', '<Plug>(copilot-dismiss)')
     end,
   },
@@ -18,7 +18,7 @@ return {
     lazy = false,
     branch = 'canary',
     dependencies = {
-      { 'zbirenbaum/copilot.lua' }, -- or github/copilot.vim
+      { 'github/copilot.lua' }, -- github/copilot.vim or zbirenbaum/copilot.lua
       { 'nvim-lua/plenary.nvim' }, -- for curl, log wrapper
     },
     build = 'make tiktoken', -- Only on MacOS or Linux
