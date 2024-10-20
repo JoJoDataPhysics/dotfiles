@@ -16,10 +16,10 @@ vim.keymap.set("n", "<C-f>", "<C-f>zz")
 vim.keymap.set("n", "x", '"_x', opts)
 
 -- Resize with arrows
-vim.keymap.set("n", "<S-Up>", ":resize -2<CR>", opts)
-vim.keymap.set("n", "<S-Down>", ":resize +2<CR>", opts)
-vim.keymap.set("n", "<S-Left>", ":vertical resize -2<CR>", opts)
-vim.keymap.set("n", "<S-Right>", ":vertical resize +2<CR>", opts)
+vim.keymap.set("n", "<M-Up>", ":resize -2<CR>", opts)
+vim.keymap.set("n", "<M-Down>", ":resize +2<CR>", opts)
+vim.keymap.set("n", "<M-Left>", ":vertical resize -2<CR>", opts)
+vim.keymap.set("n", "<M-Right>", ":vertical resize +2<CR>", opts)
 
 -- Buffers
 vim.keymap.set("n", "<Tab>", ":bnext<CR>", opts)
