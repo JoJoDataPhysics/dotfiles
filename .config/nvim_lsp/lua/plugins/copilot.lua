@@ -9,6 +9,7 @@ return {
       vim.g.copilot_no_tab_map = true
       vim.api.nvim_set_keymap('i', '<M-,>', 'copilot#Accept("<CR>")', { silent = true, expr = true })
       vim.keymap.set('i', '<M-k>', '<Plug>(copilot-next)')
+      vim.keymap.set('i', '<M-S-k>', '<Plug>(copilot-previous)')
       vim.keymap.set('i', '<M-l>', '<Plug>(copilot-accept-word)')
       vim.keymap.set('i', '<M-q>', '<Plug>(copilot-dismiss)')
     end,
