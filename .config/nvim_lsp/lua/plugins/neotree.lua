@@ -201,8 +201,8 @@ return {
 				nesting_rules = {},
 				filesystem = {
 					filtered_items = {
-						visible = false, -- when true, they will just be displayed differently than normal items
-						hide_dotfiles = true,
+						visible = true, -- when true, they will just be displayed differently than normal items
+						hide_dotfiles = false,
 						hide_gitignored = true,
 						hide_hidden = true, -- only works on Windows for hidden files/directories
 						hide_by_name = {
@@ -227,7 +227,7 @@ return {
 						},
 					},
 					follow_current_file = {
-						enabled = false, -- This will find and focus the file in the active buffer every time
+						enabled = false, -- This will find and focus the file in the active buffer every time   j
 						--               -- the current file is changed while the tree is open.
 						leave_dirs_open = false, -- `false` closes auto expanded dirs, such as with `:Neotree reveal`
 					},
