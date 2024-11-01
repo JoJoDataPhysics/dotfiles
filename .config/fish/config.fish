@@ -42,7 +42,7 @@ end
 alias n nvim-lsp
 #alias cd z
 alias ls lsd
-alias bat b
+alias b bat
 alias lg 'lazygit'
 alias r 'ranger-cd'
 alias .. 'cd ..'

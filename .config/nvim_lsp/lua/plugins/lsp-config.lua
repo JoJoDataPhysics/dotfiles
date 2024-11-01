@@ -22,7 +22,7 @@ return {
             local lspconfig = require("lspconfig")
             lspconfig.ts_ls.setup({})
             lspconfig.ruff.setup({})
-            lspconfig.pyright.setup({})
+            -- lspconfig.pyright.setup({})
             lspconfig.pylsp.setup({})
             lspconfig.lua_ls.setup({
                 settings = {
