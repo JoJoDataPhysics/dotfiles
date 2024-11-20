@@ -15,6 +15,11 @@ return {
                         end,
                     }),
                     null_ls.builtins.formatting.stylua,
+                    null_ls.builtins.formatting.clang_format.with({
+                        extra_args = {
+                            "-style={BasedOnStyle: LLVM, AllowShortFunctionsOnASingleLine: None}",
+                        },
+                    }),
                     null_ls.builtins.formatting.prettier,
                     null_ls.builtins.formatting.black,
                     null_ls.builtins.formatting.isort,
